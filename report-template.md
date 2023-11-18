@@ -1,31 +1,11 @@
 # Module 12 Report Template
 
-## Overview of the Analysis
-
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
-
 ## Results
-
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
-
 * Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
-
-
+The extremum for a balanced accuracy score is 1 and we obtained a value of about 0.95. This means our model is very accurate overall. This is also reflected in the confusion matrix, as we see true positives and true negatives heavily outweigh false positives and false negatives. Finally, precision, recall and f1-scores are quite high across the board, as shown by the classification report.
 
 * Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+The logistic regression model fit with oversampled data performs better than the original model, although not by a significant margin since both models predict the data quite well across the board. Again,the accuracy score, confusion matrix and classification report all show a high level of accuracy.
 
 ## Summary
-
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+Out of the two models we used, the model fit with oversampled data performed best. I would recommend it given its high level of accuracy, particularly with healthy loans. It can be used to approve loan applications quicker, given how well it predicts this. I do think even if it is pretty accurate with predicting high risk loans, I don't think it should be used to reject loans entirely. There should still be a human involved in that decision. 
